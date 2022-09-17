@@ -39,7 +39,10 @@ a:hover {
     background:-ms-radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 30%, rgba(33,37,41,var(--bs-bg-opacity,1)) 70%);
     background:radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 30%, RGBA(33,37,41,var(--bs-bg-opacity,1)) 70%);
 }
-
+.gradient img {
+    margin-left: -18rem;
+    filter: grayscale(0.8);
+}
 
 .fixed-menu-left {
     position: fixed;
@@ -77,11 +80,10 @@ a:hover {
     transition: all 0.5s;
 }
 
-
-.gradient img {
-    margin-left: -12rem;
-    filter: grayscale(0.8);
+.cv .row{
+    padding-left: 3rem;
 }
+
 @media (max-width: 576px) {
 }
 
