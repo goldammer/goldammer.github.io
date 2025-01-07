@@ -63,6 +63,10 @@ a:hover {
     margin: 5rem auto;
 }
 
+.fixed-menu-left-blocker {
+    padding-left: 3.2rem !important;
+}
+
 .fixed-menu-icon {
     width: 30px;
     display: inline-flex;
