@@ -1,7 +1,13 @@
 :root {
     --accent-color: #73b6ef;
 
+    --bs-body-font-family: Roboto, Helvetica Neue, sans-serif;
+    --mdc-filled-text-field-caret-color: var(--accent-color);
+    --mdc-filled-text-field-focus-label-text-color: fff;
+    --mdc-filled-text-field-focus-active-indicator-color: var(--accent-color);
+    --mat-sys-primary: var(--accent-color);
 }
+
 .navbar-dark, .navbar-nav {
     --bs-navbar-active-color: var(--accent-color) !important;
     --bs-nav-link-hover-color: var(--accent-color) !important;
@@ -84,8 +90,8 @@ a:hover {
     transition: all 0.5s;
 }
 
-.cv .row{
-    padding-left: 3rem;
+.background {
+    pointer-events: none;
 }
 
 @media (max-width: 576px) {
