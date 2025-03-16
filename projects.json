@@ -1,12 +1,30 @@
 [
   {
-    "name": "Entwicklung Financing-Process-Service ",
-    "startDate": "2024-04-01",
+    "name": "Entwicklung Vertragsservice",
+    "startDate": "2025-02-01",
     "endDate": null,
+    "description": "Entwicklung eines zentralen Vertragsservices zur Verwaltung aller Eigen- und Fremdverträge. Änderungen und neue Verträge werden über Kafka Topics eingelesen, von einem Mapping-Service in ein einheitliches Format transformiert und als JSON in einer PostgreSQL Datenbank gespeichert. Der Service bietet ein generisches Angular-Frontend, das flexibel die Darstellung und Bearbeitung verschiedenster Vertragsarten ermöglicht.",
+    "roles": ["Software Architect", "Software Engineer"],
+    "industry": "Finanzvertrieb",
+    "technologies": ["Kotlin", "Spring", "Spring-Security", "Kafka", "Maven", "OpenAPI", "Angular", "Azure"]
+  },
+  {
+    "name": "Entwicklung Spring Boot Starter Library",
+    "startDate": "2024-12-01",
+    "endDate": "2025-02-28",
+    "description": "Entwicklung einer Spring Boot Starter Library, die zentrale Funktionen für Microservices bereitstellt. Die Library verwendet AutoConfiguration, um Funktionen automatisch zu konfigurieren, wobei diese nur aktiviert werden, wenn benötigte Beans vorhanden sind. Gleichzeitig ermöglicht sie eine anpassbare Konfiguration durch Properties und unterstützt die Modularität zur Flexibilität und Wiederverwendbarkeit der Funktionen in verschiedenen Services.",
+    "roles": ["Software Architect", "Software Engineer"],
+    "industry": "Finanzdienstleister",
+    "technologies": ["Java", "Spring", "Spring-Security"]
+  },
+  {
+    "name": "Entwicklung Financing-Process-Service",
+    "startDate": "2024-04-01",
+    "endDate": "2025-01-31",
     "description": "Viele fachliche Funktionen, welche im Rahmen der Kreditfinanzierung benötigt werden, wurden bereits aus dem Monolithen in Microservices überführt. Dieser Service stellt nun alle Funktionen zur Verfügung, um einen neuen Finanzierungsprozess anzulegen, alle benötigten Daten zu sammeln und übernimmt dabei auch die Orchestrierung zu anderen beteiligten Services und Systemen.",
     "roles": ["Software Architect", "Software Engineer"],
     "industry": "Finanzdienstleister",
-    "technologies": ["Java", "Spring", "Spring-Security", "OpenAPI", "JMS", "Postman", "Gradle", "Angular", "SOAP", "Oracle"]
+    "technologies": ["Java", "Spring", "Spring-Security", "OpenAPI", "JMS", "RabbitMQ", "Postman", "Gradle", "Angular", "SOAP", "Oracle"]
   },
   {
     "name": "Entwicklung Company-Service",
@@ -15,31 +33,31 @@
     "description": "Zur Abfrage von Unternehmensdaten wurde die Bedirect Schnittstelle angebunden. Diese ermöglicht den Zugriff auf umfangreiche Informationen zu Unternehmen. Die Abfrage von Wirtschaftlichberechtigten erfolgt über die CREFO Schnittstelle. Diese Schnittstelle stellt Informationen zu den natürlichen Personen zur Verfügung, die hinter einem Unternehmen stehen. Der Service wurde mit Spring Boot entwickelt und spricht intern weitere Systeme über eine SOAP Schnittstelle an.",
     "roles": ["Software Architect", "Software Engineer"],
     "industry": "Finanzdienstleister",
-    "technologies": ["Java", "Spring", "Spring Security", "OpenAPI", "Postman", "Gradle", "SOAP"]
+    "technologies": ["Java", "Spring", "Spring-Security", "OpenAPI", "Postman", "Gradle", "SOAP"]
   },
   {
     "name": "Entwicklung Pricing-Service",
     "startDate": "2023-05-01",
     "endDate": "2023-11-30",
-    "description": "  Der alte Pricing-Service, auf JavaEE / Weblogic Basis soll\n\n  nach Spring migriert werden.\n\n\n\n  Der Service berechnet die Zinsen für die verschiedenen\n\n  Kreditprodukte anhand von diversen Kostenbestandteilen. Die ermittelten\n\n  Zinsmatrixen werden bei Vertragsabschluss persistiert. Im Rahmen der\n\n  Migration wurden umfangreiche Anpassungen am Datenmodell vorgenommen, welche\n\n  die Migration, der über 20 Millionen Zinseinträge nötig gemacht hat.",
+    "description": "Der alte Pricing-Service, auf JavaEE / Weblogic Basis soll nach Spring migriert werden. Der Service berechnet die Zinsen für die verschiedenen Kreditprodukte anhand von diversen Kostenbestandteilen. Die ermittelten Zinsmatrizen werden bei Vertragsabschluss persistiert. Im Rahmen der Migration wurden umfangreiche Anpassungen am Datenmodell vorgenommen, welche die Migration, der über 20 Millionen Zinseinträge nötig gemacht hat.",
     "roles": ["Software Architect", "Software Engineer"],
     "industry": "Finanzdienstleister",
-    "technologies": ["Java", "Spring", "Spring Security", "OpenAPI", "Postman", "Gradle", "Angular", "SOAP", "Oracle"]
+    "technologies": ["Java", "Spring", "Spring-Security", "OpenAPI", "Postman", "Gradle", "Angular", "SOAP", "Oracle"]
   },
   {
     "name": "Entwicklung Kontocheck-Service",
     "startDate": "2023-01-01",
     "endDate": "2023-04-30",
-    "description": "Kunden sollen im Rahmen einer Kreditanfrage die\n\n  Möglichkeit bekommen, ihre Kontobewegungen freizugeben, um einen besseren\n\n  Zinssatz zu erhalten.\n\n\n\n  Der Kunde wird auf einer eigenen Landingpage über den\n\n  Prozess informiert.\n\n\n\n  Wenn er zustimmt, wird ein Kontofreigabe Prozess über die\n\n  FinAPI Schnittstelle der Schufa angestoßen. Nach erfolgreicher oder\n\n  abgebrochener Freigabe werden SAP und weitere Systeme über den Prozess\n\n  informiert.",
+    "description": "Kunden sollen im Rahmen einer Kreditanfrage die Möglichkeit bekommen, ihre Kontobewegungen freizugeben, um einen besseren Zinssatz zu erhalten. Der Kunde wird auf einer eigenen Landingpage über den Prozess informiert. Wenn er zustimmt, wird ein Kontofreigabe Prozess über die FinAPI Schnittstelle der Schufa angestoßen. Nach erfolgreicher oder abgebrochener Freigabe werden SAP und weitere Systeme über den Prozess informiert.",
     "roles": ["Software Architect", "Software Engineer"],
     "industry": "Finanzdienstleister",
-    "technologies": ["Spring", "JMS", "OpenAPI", "Angular", "Gradle"]
+    "technologies": ["Spring", "JMS", "RabbitMQ", "OpenAPI", "Angular", "Gradle"]
   },
   {
     "name": "Weiterentwicklung der internen Bankberatersoftware",
     "startDate": "2022-08-01",
     "endDate": "2022-09-30",
-    "description": "Anpassung der Sondertilgungsfunktion mit Parallelberechnung von Raten und Laufzeitreduzierung sowie einer Vorschaufunktion für die neuen Ratenpläne. Mandantenabhängige Anpassung des Layouts.",
+    "description": "Anpassung der Sondertilgungsfunktion zur Parallelberechnung von Raten und Laufzeitreduzierung.\nDer neue Ratenplan kann sich als PDF in einem Vorschaufenster angeschaut werden.\nMandantenabhängige Anpassung des Layouts.",
     "roles": ["Software Engineer"],
     "industry": "Finanzdienstleister",
     "technologies": ["Java 8", "JSF", "Primefaces", "JUnit", "Mockito", "Jenkins", "SOAP"]
@@ -48,7 +66,7 @@
     "name": "Schnittstellenmigration RMI auf REST",
     "startDate": "2022-04-01",
     "endDate": "2022-05-31",
-    "description": "  Aufbau einer REST-Schnittstelle für den Pricing-Service analog der bestehenden RMI- Schnittstelle für den parallelbetrieb während der Migration.",
+    "description": "Aufbau einer REST-Schnittstelle für den Pricing-Service analog der bestehenden RMI- Schnittstelle für den parallelbetrieb während der Migration.",
     "roles": ["Software Engineer"],
     "industry": "Finanzdienstleister",
     "technologies": ["Java 8", "RMI", "REST", "JUnit", "Mockito", "Jenkins"]
@@ -57,8 +75,8 @@
     "name": "Tech-Stack Evaluierung API-Projekt",
     "startDate": "2021-04-01",
     "endDate": "2022-03-31",
-    "description": "Evaluierung von Technologien für die Migration bestehender Anwendungen in eine Microservice-Architektur. Vergleich und Auswahl geeigneter Tools (Messaging, JavaEE vs Spring, Build-Tools) für zukünftige Projekte.",
-    "roles": ["Software Engineer"],
+    "description": "Evaluierung von Technologien für die Migration bestehender Anwendungen in eine Microservice-Architektur.\nVergleich und Auswahl geeigneter Tools (Messaging, JavaEE vs Spring, Build-Tools) für zukünftige Projekte.",
+    "roles": ["Software Architect"],
     "industry": "Finanzdienstleister",
     "technologies": ["JavaEE", "Spring", "Messaging", "Build-Tools"]
   },
@@ -66,7 +84,7 @@
     "name": "Migration und Weiterentwicklung der Online-Bestellstrecke für Kredite",
     "startDate": "2020-12-01",
     "endDate": "2023-03-31",
-    "description": "Die Onlinebestellstrecke für Unternehmerkredite der VR\n\n  Smart Finanz sollte in die Vertriebsplattform integriert und gleichzeitig auf\n\n  eine technisch neue Basis gehoben werden.\n\n\n\n  Das Angular Frontend ist nur für registrierte Kunden der\n\n  Bank aufrufbar. Die Authentifizierung in der Plattform wird mit Hilfe von JWT\n\n  umgesetzt. Aus der OpenAPI Schnittstellendokumentation werden mit OpenAPI\n\n  Codegen die Java Interfaces sowie die TypeScript Klassen für Angular\n\n  generiert. \n\n\n\n  Die Spring Anwendung ruft die Microservices anderer Teams\n\n  auf. Einige Anfragen werden über ein API-Gateway an die dahinterliegende\n\n  Legacy Systemwelt gesendet. Beide Anwendungen werden durch eine CI/CD\n\n  Pipeline als Docker Images in Kubernetes bzw. auf einer OpenShift Plattform\n\n  deployed.",
+    "description": "Die Onlinebestellstrecke für Unternehmerkredite der VR Smart Finanz sollte in die Vertriebsplattform integriert und gleichzeitig auf eine technisch neue Basis gehoben werden. Das Angular Frontend ist nur für registrierte Kunden der Bank aufrufbar. Die Authentifizierung in der Plattform wird mit Hilfe von JWT umgesetzt. Aus der OpenAPI Schnittstellendokumentation werden mit OpenAPI Codegen die Java Interfaces sowie die TypeScript Klassen für Angular generiert. Die Spring Anwendung ruft die Microservices anderer Teams auf. Einige Anfragen werden über ein API-Gateway an die dahinterliegende Legacy Systemwelt gesendet. Beide Anwendungen werden durch eine CI/CD Pipeline als Docker Images in Kubernetes bzw. auf einer OpenShift Plattform deployed.",
     "roles": ["Software Engineer"],
     "industry": "Finanzdienstleister",
     "technologies": ["Java 11", "Spring", "JMS", "JUnit", "Mockito", "OpenAPI", "Angular", "AngularJS", "Node", "NPM", "JWT", "Jenkins", "Docker", "Kubernetes", "OpenShift", "Prometheus", "Grafana", "SonarQube", "Graylog"]
@@ -74,8 +92,8 @@
   {
     "name": "Leiter Softwareentwicklung",
     "startDate": "2020-06-01",
-    "description":"* Senior Consultant / Teamleitung Softwareentwicklung * Architekturberatung und Softwareentwicklung * Konzeption und Implementierung webbasierter Applikationen Durchführung agiler Softwareprojekte",
-    "roles": ["Teamleiter"],
+    "description":"Verantwortlich für die:\n\n* Leitung des Java- & Webentwicklung Teams\n* Architekturberatung und Softwareentwicklung\n* Konzeption und Implementierung webbasierter Applikationen\n* Durchführung agiler Softwareprojekte",
+    "roles": ["Teamleiter", "Software Architect", "Lead Software Engineer"],
     "industry": "IT Consulting",
     "technologies": ["Java", "JavaEE", "Spring", "OpenAPI", "CI/CD", "Quarkus", "Angular", "ReactNative", "JavaScript", "TypeScript"]
   },
@@ -83,7 +101,7 @@
     "name": "Automatisierung von Berechtigungsschnittstellen",
     "startDate": "2020-09-01",
     "endDate": "2020-11-30",
-    "description": "  Das Berechtigungssystem der VR Smart Finanz musste im\n\n  Rahmen der Harmonisierung der IT-Landschaft an das Berechtigungssystem der\n\n  DZ-Bank angeschlossen werden. Im Berechtigungssystem der VR Smart Finanz\n\n  werden für jeden Systemzugang und jede Berechtigung in einem System Anträge\n\n  erstellt. In der Vergangenheit mussten diese Anträge von\n\n  Systemadministratoren manuell bearbeitet werden. Durch die Automatisierung\n\n  einiger dieser Schnittstellen über z.B. LDAP konnte der manuelle Aufwand\n\n  erheblich reduziert werden.",
+    "description": "Das Berechtigungssystem der VR Smart Finanz musste im Rahmen der Harmonisierung der IT-Landschaft an das Berechtigungssystem der DZ-Bank angeschlossen werden. Im Berechtigungssystem der VR Smart Finanz werden für jeden Systemzugang und jede Berechtigung in einem System Anträge erstellt. In der Vergangenheit mussten diese Anträge von Systemadministratoren manuell bearbeitet werden. Durch die Automatisierung einiger dieser Schnittstellen über z.B. LDAP konnte der manuelle Aufwand erheblich reduziert werden.",
     "roles": ["Software Engineer"],
     "industry": "Finanzdienstleister",
     "technologies": ["Java 8", "Oracle", "MySQL", "LDAP", "Software Process Platform SoftForceOne"]
@@ -101,7 +119,7 @@
     "name": "Leitung des E-Commerce IT Bereichs",
     "startDate": "2018-05-01",
     "endDate": "2020-05-31",
-    "description": "Verantwortlich für die:\n * Disziplinarische Führung des E-Commerce IT Teams\n* Verwaltung des E-Commerce IT-Budgets\n* Verantwortung des Betriebs und der Weiterentwicklung der Buchungsfunktionalitäten der Websites der Airline Gruppe",
+    "description": "Verantwortlich für die:\n\n* Disziplinarische Führung des E-Commerce IT Teams\n* Verwaltung des E-Commerce IT-Budgets\n* Verantwortung des Betriebs und der Weiterentwicklung der Buchungsfunktionalitäten der Websites der Airline Gruppe",
     "roles": ["IT-Leitung", "Projektmanager"],
     "industry": "Luftfahrt",
     "technologies": []
@@ -112,7 +130,7 @@
     "endDate": "2018-07-31",
     "industry": "Luftfahrt",
     "roles": ["Software Architect", "Lead Software Engineer"],
-    "description": "  Um die künftige Entwicklung von verschiedenen Frontends\n\n  unabhängiger von der darunterliegenden kommerziellen und operativen\n\n  Systemlandschaft zu gestalten, musste eine API entworfen werden, welche die\n\n  Geschäftslogik nach außen wegkapselt.\n\n\n\n  Mit Swagger/OpenAPI wurden die Schnittstellen definiert,\n\n  dokumentiert und die Datenklassen generiert, um die Übereinstimmung aus\n\n  Schnittstellenspezifikation und Implementierung zu gewährleisten.\n\n\n\n  Die Daten aus den Backend-Systemen wurden per JPA, Remote\n\n  EJB und REST-Service Calls abgeholt und gegebenenfalls gecached um eine\n\n  möglichst hohe Performance zu erreichen.",
+    "description": "Um die künftige Entwicklung von verschiedenen Frontends unabhängiger von der darunterliegenden kommerziellen und operativen Systemlandschaft zu gestalten, musste eine API entworfen werden, welche die Geschäftslogik nach außen wegkapselt. Mit Swagger/OpenAPI wurden die Schnittstellen definiert, dokumentiert und die Datenklassen generiert, um die Übereinstimmung aus Schnittstellenspezifikation und Implementierung zu gewährleisten. Die Daten aus den Backend-Systemen wurden per JPA, Remote EJB und REST-Service Calls abgeholt und gegebenenfalls gecached um eine möglichst hohe Performance zu erreichen.",
     "technologies": ["Java EE", "JPA", "EJB", "REST", "Swagger", "OpenAPI", "Infinispan", "JUnit", "Mockito", "Gradle", "Wildfly"]
   },
   {
@@ -121,16 +139,16 @@
     "endDate": "2017-11-30",
     "industry": "Luftfahrt",
     "roles": ["Software Architect", "Lead Software Engineer"],
-    "description": "Um in der komplexen Vertriebslandschaft proaktiv und\n\n  schneller auf Fehler reagieren zu können, sollte AppDynamics als APM Tool\n\n  eingeführt werden.\n\n\n\n  Zuerst mussten die Server für die on-premise Lösung\n\n  vorbereitet, konfiguriert und freigeschaltet werden. Auf allen Servern sowie\n\n  in allen Anwendungs-Prozessen mussten die \"AppDynamics Agents\"\n\n  installiert oder eingebunden werden.\n\n\n\n  Für die besonders relevanten Services musste zusätzlich\n\n  ein Feintuning bei konfiguration der Baselines, den Benachrichtigungen und\n\n  Reporting erfolgen.",
+    "description": "Um in der komplexen Vertriebslandschaft proaktiv und schneller auf Fehler reagieren zu können, sollte AppDynamics als APM Tool eingeführt werden.\nZuerst mussten die Server für die on-premise Lösung vorbereitet, konfiguriert und freigeschaltet werden. Auf allen Servern sowie in allen Anwendungs-Prozessen mussten die \"AppDynamics Agents\" installiert oder eingebunden werden. Für die besonders relevanten Services musste zusätzlich ein Feintuning bei konfiguration der Baselines, den Benachrichtigungen und Reporting erfolgen.",
     "technologies": ["AppDynamics", "Linux/Unix"]
   },
   {
-    "name": "  Prototype - Alexa Skill - Flugstatus Abfrage",
+    "name": "Prototype - Alexa Skill - Flugstatus Abfrage",
     "startDate": "2017-09-01",
     "endDate": "2017-09-30",
     "industry": "Luftfahrt",
     "roles": ["Software Architect", "Lead Software Engineer"],
-    "description": "  Es sollte evaluiert werden, wie aufwendig die Entwicklung\n\n  eines Alexa Skills ist. Mit Hilfe des bestehenden REST Services zur Abfrage\n\n  des Flugstatus auf der Webseite, konnte innerhalb weniger Tage eine\n\n  funktionierender Alexa Skill entwickelt werden.",
+    "description": "Es sollte evaluiert werden, wie aufwendig die Entwicklung eines Alexa Skills ist. Mit Hilfe des bestehenden REST Services zur Abfrage des Flugstatus auf der Webseite, konnte innerhalb weniger Tage eine funktionierender Alexa Skill entwickelt werden.",
     "technologies": []
   },
   {
@@ -139,7 +157,7 @@
     "endDate": "2017-08-31",
     "industry": "Luftfahrt",
     "roles": ["Software Architect", "Lead Software Engineer"],
-    "description": "Nach erfolgreicher Migration des Vertriebssystems, wurde\n\n  die Neuentwicklung wieder aufgenommen. Die Module Flugbuchung, Flugstatus,\n\n  Gruppenbuchung und Angebotsseiten sollten in AngularJS umgesetzt werden. Dabei\n\n  mussten einige Prototypen der Designagentur von VueJS, unter Einhaltung der WCAG-Richtlinien\n\n  (Barrierefreiheit), nach Angular migriert werden.\n\n\n\n  Der bestehende Backend Teil konnte zu großen Teilen\n\n  wiederverwendet werden. Die Daten wurden als JSON Objekte per\n\n  REST-Schnittstelle an das Frontend übertragen. Eine der größten\n\n  Herausforderungen im Frontend waren die Wiederverwendung von Code bei gleichzeitig\n\n  möglichst großer Flexibilität für die unterschiedlichen Module und Tenants.\n\n\n\n  Die verschiedenen Module wurden im März 2017 erfolgreich\n\n  Live genommen. Danach stand die Performance Optimierung sowie Anpassungen\n\n  durch das Kundenfeedback im Mittelpunkt.",
+    "description": "Nach erfolgreicher Migration des Vertriebssystems, wurde die Neuentwicklung wieder aufgenommen. Die Module Flugbuchung, Flugstatus, Gruppenbuchung und Angebotsseiten sollten in AngularJS umgesetzt werden. Dabei mussten einige Prototypen der Designagentur von VueJS, unter Einhaltung der WCAG-Richtlinien (Barrierefreiheit), nach Angular migriert werden. Der bestehende Backend Teil konnte zu großen Teilen wiederverwendet werden. Die Daten wurden als JSON Objekte per REST-Schnittstelle an das Frontend übertragen. Eine der größten Herausforderungen im Frontend waren die Wiederverwendung von Code bei gleichzeitig möglichst großer Flexibilität für die unterschiedlichen Module und Tenants. Die verschiedenen Module wurden im März 2017 erfolgreich Live genommen. Danach stand die Performance Optimierung sowie Anpassungen durch das Kundenfeedback im Mittelpunkt.",
     "technologies": ["JavaEE", "JPA", "EJBs", "JUnit", "Mockito", "Infinispan", "VueJS", "AngularJS", "Node", "NPM", "Jasmine", "Karma", "JBoss EAP", "IntelliJ", "Nexus", "Maven"]
   },
   {
@@ -148,7 +166,7 @@
     "endDate": "2015-12-31",
     "industry": "Luftfahrt",
     "roles": ["Software Architect", "Lead Software Engineer"],
-    "description": "  Aufgrund des fixen Ziel Termins zur Migration des\n\n  Vertriebssystems für die Airline Gruppe, war eine komplette Neuentwicklung\n\n  unrealistisch geworden. Deshalb musste die bestehende IBE im Design angepasst\n\n  und die fehlenden Funktionen/Anforderungen der anderen Group Airlines\n\n  eingebaut werden.\n",
+    "description": "Aufgrund des fixen Ziel Termins zur Migration des Vertriebssystems für die Airline Gruppe, war eine komplette Neuentwicklung unrealistisch geworden. Deshalb musste die bestehende IBE im Design angepasst und die fehlenden Funktionen/Anforderungen der anderen Group Airlines eingebaut werden.",
     "technologies": ["JavaEE", "JSF", "JBoss EAP", "Eclipse"]
   },
   {
@@ -157,7 +175,7 @@
     "endDate": "2015-12-31",
     "industry": "Luftfahrt",
     "roles": ["Software Architect", "Lead Software Engineer"],
-    "description": "  Das bestehende Fare Management Tool (CoFT) für die GDS\n\n  Fares der Condor, sollte im Rahmen der Migration aller Thomas Cook Airlines\n\n  auf ein Vertriebssystem, erweitert werden.\n\n\n\n  Zukünftig sollten alle Fares für alle Airlines und\n\n  Vertriebskanäle, zentral in einem System gepflegt werden. Hierzu wurde das\n\n  bestehende System um Module für TourOperator /Reisever anstalter, Einzelplatz\n\n  Preise, Steuern und einer Administrationsoberfläche zur Userverwaltung sowie\n\n  einem Berechtigungskonzept erweitert.\n\n\n\n  Anders als bei den GDS Preisen, wurden für die anderen\n\n  Preise Schnittstellen in die verschiedenen Vertriebssysteme implementiert.",
+    "description": "Das bestehende Fare Management Tool (CoFT) für die GDS Fares der Condor, sollte im Rahmen der Migration aller Thomas Cook Airlines auf ein Vertriebssystem, erweitert werden. Zukünftig sollten alle Fares für alle Airlines und Vertriebskanäle, zentral in einem System gepflegt werden. Hierzu wurde das bestehende System um Module für TourOperator /Reisever anstalter, Einzelplatz  Preise, Steuern und einer Administrationsoberfläche zur Userverwaltung sowie einem Berechtigungskonzept erweitert. Anders als bei den GDS Preisen, wurden für die anderen Preise Schnittstellen in die verschiedenen Vertriebssysteme implementiert.",
     "technologies": ["JavaEE", "JSF", "Primefaces", "MySQL", "JPA", "JBoss EAP", "Eclipse"]
   },
   {
@@ -166,7 +184,7 @@
     "endDate": "2015-07-31",
     "industry": "Luftfahrt",
     "roles": ["Software Architect", "Lead Software Engineer"],
-    "description": "Durch den Wechsel der eCommerce Leitung, sollte das\n\n  Frontend der Flugbuchung, in ein neues Design überführt werden. Hierzu sollte\n\n  diesmal aber nicht JSF, sondern AngularJS als Framework dienen.\n\n\n\n  Durch das vorherige Projekt war der Code der Flugbuchung\n\n  schon relativ gut in Frontend und Backend unterteilt. Nach 4 Monaten musste\n\n  das Projekt allerdings, auf Grund der Migration des Vertriebssystems,\n\n  vorrübergehend pausiert werden.",
+    "description": "Durch den Wechsel der eCommerce Leitung, sollte das Frontend der Flugbuchung, in ein neues Design überführt werden. Hierzu sollte diesmal aber nicht JSF, sondern AngularJS als Framework dienen. Durch das vorherige Projekt war der Code der Flugbuchung schon relativ gut in Frontend und Backend unterteilt. Nach 4 Monaten musste das Projekt allerdings, auf Grund der Migration des Vertriebssystems, vorrübergehend pausiert werden.",
     "technologies": ["JavaEE", "JPA", "EJBs", "JUnit", "Mockito", "AngularJS", "JBoss EAP", "Eclipse", "WebStorm"]
   },
   {
@@ -175,7 +193,7 @@
     "endDate": "2014-12-31",
     "industry": "Luftfahrt",
     "roles": ["Software Architect", "Lead Software Engineer"],
-    "description": "  Die bestehende IBE (Internet Booking Engine) auf Basis von\n\n  JSPs sollte neugestaltet und in eine JSF Lösung überführt werden. Hierzu\n\n  musste die Geschäftslogik, welche bisher im Code und den JSP-Seiten verteilt\n\n  war, analysiert und in Backend Logik (EJB) und Frontend Logik überführt\n\n  werden.",
+    "description": "Die bestehende IBE (Internet Booking Engine) auf Basis von JSPs sollte neugestaltet und in eine JSF Lösung überführt werden. Hierzu musste die Geschäftslogik, welche bisher im Code und den JSP-Seiten verteilt war, analysiert und in Backend Logik (EJB) und Frontend Logik überführt werden.",
     "technologies": ["JavaEE", "JSF", "JBoss EAP", "Eclipse"]
   },
   {
@@ -184,7 +202,7 @@
     "endDate": "2014-03-31",
     "industry": "Luftfahrt",
     "roles": ["Software Engineer"],
-    "description": "  Dynamische Angebotsseiten Im Extranet, einem Portal für\n\n  die Reisebüropartner der Condor, sollten besonders günstige Kombinationen aus\n\n  Hin und Rückflügen beworben werden.\n\n\n\n  Dafür mussten die genauen Anforderungen des Fachbereichs\n\n  erfasst werden, um die Schnittstelle zum Backend System zu spezifizieren. Die\n\n  Daten wurden per Remote EJB Calls abgeholt und am Frontend mit Hilfe von JSF\n\n  und Javascript dargestellt.",
+    "description": "Dynamische Angebotsseiten Im Extranet, einem Portal für die Reisebüropartner der Condor, sollten besonders günstige Kombinationen aus Hin und Rückflügen beworben werden. Dafür mussten die genauen Anforderungen des Fachbereichs erfasst werden, um die Schnittstelle zum Backend System zu spezifizieren. Die Daten wurden per Remote EJB Calls abgeholt und am Frontend mit Hilfe von JSF und Javascript dargestellt.",
     "technologies": ["JavaEE", "JSF", "JSP", "EJB", "JavaScript", "Tomcat", "Eclipse"]
   },
   {
@@ -193,7 +211,7 @@
     "endDate": "2013-10-31",
     "industry": "Luftfahrt",
     "roles": ["Software Engineer"],
-    "description": "Die Flugpreise für den GDS-Vertriebskanal werden durch\n\n  einen externen Dienstleister eingepflegt, welcher die Preise im Excel Format\n\n  erwartet. Deshalb wurden die Preise intern auch in verschiedenen Excel\n\n  Dateien je Land gepflegt.\n\n\n\n  Durch das neue Tool sollten alle Preise in einer\n\n  Weboberfläche verwaltet und angepasst werden können. Es musste möglich sein,\n\n  mehrere 100.000 Tarife gleichzeitig anzupassen.\n\n\n\n  Die Oberfläche wurde mit JSF und Primefaces entworfen. Um\n\n  eine höhere Performance beim Schreiben auf der Datenbank zu erreichen, musste\n\n  an einigen Stellen das automatische Transaction Handling zwischen der\n\n  Java/JPA und der MySQL Datenbank angepasst werden.",
+    "description": "Die Flugpreise für den GDS-Vertriebskanal werden durch einen externen Dienstleister eingepflegt, welcher die Preise im Excel Format erwartet. Deshalb wurden die Preise intern auch in verschiedenen Excel Dateien je Land gepflegt. Durch das neue Tool sollten alle Preise in einer Weboberfläche verwaltet und angepasst werden können. Es musste möglich sein, mehrere 100.000 Tarife gleichzeitig anzupassen. Die Oberfläche wurde mit JSF und Primefaces entworfen. Um eine höhere Performance beim Schreiben auf der Datenbank zu erreichen, musste an einigen Stellen das automatische Transaction Handling zwischen der Java/JPA und der MySQL Datenbank angepasst werden.",
     "technologies": ["Java", "Spring", "JPA", "JTA", "JSF", "Primefaces", "MySQL", "JBoss EAP", "Eclipse"]
   },
   {
@@ -202,7 +220,7 @@
     "endDate": "2013-05-31",
     "industry": "Luftfahrt",
     "roles": ["Software Engineer"],
-    "description": "Die Flugbuchung der Condor sollte mit Hilfe von Selenium\n\n  und dem Tool Nabucco automatisiert werden, um den manuellen Testaufwand des\n\n  Fachbereiches zu minimieren.\n\n\n\n  Dazu mussten zuerst Anpassungen in den .jsp und Javascript\n\n  Teilen der Flugbuchung vorgenommen werden, um die Seite für Selenium\n\n  überhaupt testbar zu machen.\n\n\n\n  Danach habe ich eine Schnittstelle entwickelt, welche den\n\n  Testautomat dynamisch mit validen Testdaten für das jeweilige Szenario\n\n  versorgt hat.\n",
+    "description": "Die Flugbuchung der Condor sollte mit Hilfe von Selenium und dem Tool Nabucco automatisiert werden, um den manuellen Testaufwand des Fachbereiches zu minimieren. Dazu mussten zuerst Anpassungen in den .jsp und Javascript Teilen der Flugbuchung vorgenommen werden, um die Seite für Selenium überhaupt testbar zu machen. Danach habe ich eine Schnittstelle entwickelt, welche den Testautomat dynamisch mit validen Testdaten für das jeweilige Szenario versorgt hat.",
     "technologies": ["Selenium", "Nabucco", "Eclipse", "JavaEE", "JSP", "JavaScript"]
   },
   {
@@ -211,16 +229,16 @@
     "endDate": "2012-11-30",
     "industry": "Luftfahrt",
     "roles": ["Projektleiter", "Anwendungsbetreuer"],
-    "description": "Betreuung des zentralen Flugvertriebssystems und der\n\n  dazugehörigen Schnittstellen Beratung der Fachbereiche bei der fachlichen\n\n  Konzeption von neuen Anforderungen Koordination zwischen internen\n\n  Fachbereichen und externen Dienstleistern Entwicklung von Oracle PL/SQL\n\n  Anwendungen, CGI Programmen zur dynamischen Abfrage diverser Reports",
+    "description": "Betreuung des zentralen Flugvertriebssystems und der dazugehörigen Schnittstellen Beratung der Fachbereiche bei der fachlichen Konzeption von neuen Anforderungen Koordination zwischen internen Fachbereichen und externen Dienstleistern Entwicklung von Oracle PL/SQL Anwendungen, CGI Programmen zur dynamischen Abfrage diverser Reports",
     "technologies": ["Oracle PL/SQL", "CGI", "Flugvertriebssystem"]
   },
   {
-    "role": "Fachinformatiker für Anwendungsentwicklung",
+    "name": "Fachinformatiker für Anwendungsentwicklung",
     "startDate": "2005-09-01",
     "endDate": "2008-06-30",
     "industry": "Luftfahrt",
     "roles": ["Software Engineer"],
-    "description": "* Migration der Anwendung zur Flugverwaltung von Java 1.3 auf Java 1.5\n * Entwicklung einer Java Anwendung zum\n\n  Preisabgleich mit Online Portalen\n\n  * COBOL Batch Programme",
+    "description": "* Migration der Anwendung zur Flugverwaltung von Java 1.3 auf Java 1.5\n* Entwicklung einer Java Anwendung zum Preisabgleich mit Online Portalen\n * COBOL Batch Programme",
     "technologies": ["Java", "COBOL", "Flugverwaltungssystem"]
   }
 ]
