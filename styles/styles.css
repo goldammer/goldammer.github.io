@@ -1,18 +1,38 @@
 :root {
-    --accent-color: #73b6ef;
+    --header-bar-color: #2d3848;
+    --background-color: #27303D;
+    --accent-color: #4AA5DA;
+    --accent-gold: #F4D609;
 
     --bs-body-font-family: Roboto, Helvetica Neue, sans-serif;
     --mdc-filled-text-field-caret-color: var(--accent-color);
-    --mdc-filled-text-field-focus-label-text-color: fff;
+    --mdc-filled-text-field-label-text-color: #fff;
+    --mdc-filled-text-field-focus-label-text-color: #fff;
     --mdc-filled-text-field-focus-active-indicator-color: var(--accent-color);
+    --mdc-filled-text-field-container-color: var(--background-color);
+    --mat-autocomplete-background-color: var(--background-color);
+    --mdc-elevated-card-container-color: var(--header-bar-color);
+
     --mat-sys-primary: var(--accent-color);
+}
+
+.text-bg-dark{
+    background-color: var(--background-color) !important;
+}
+.mat-mdc-standard-chip {
+    --mdc-chip-elevated-container-color: var(--background-color);
+    --mdc-chip-elevated-disabled-container-color: var(--background-color);
+}
+
+.navbar{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-dark, .navbar-nav {
     --bs-navbar-active-color: var(--accent-color) !important;
     --bs-nav-link-hover-color: var(--accent-color) !important;
-
-    background-color: RGBA(33,37,41,var(--bs-bg-opacity,1))!important;
+    --bs-navbar-color: #FFFFFF !important;
+    background-color: var(--header-bar-color) !important;
 
     font-weight: 700;
     letter-spacing: 2px;
@@ -26,7 +46,15 @@ a:hover {
     color: var(--accent-color);
 }
 
-.gradient{
+.accent-gold {
+    color: var(--accent-gold);
+}
+
+::marker {
+    color: var(--accent-gold);
+}
+
+.gradient {
     position:relative;
     display:inline-block;
     height: 100vh;
@@ -39,11 +67,11 @@ a:hover {
     left:0; top:0;
     width:100%; height:100%;
     display:inline-block;
-    background:-moz-radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 30%, rgba(33,37,41,var(--bs-bg-opacity,1)) 70%);
-    background:-webkit-radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 30%, rgba(33,37,41,var(--bs-bg-opacity,1)) 70%);
-    background:-o-radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 30%, rgba(33,37,41,var(--bs-bg-opacity,1)) 70%);
-    background:-ms-radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 30%, rgba(33,37,41,var(--bs-bg-opacity,1)) 70%);
-    background:radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 30%, RGBA(33,37,41,var(--bs-bg-opacity,1)) 70%);
+    background:-moz-radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 30%, RGBA(39,48,61,var(--bs-bg-opacity,1)) 70%);
+    background:-webkit-radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 30%, RGBA(39,48,61,var(--bs-bg-opacity,1)) 70%);
+    background:-o-radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 30%, RGBA(39,48,61,var(--bs-bg-opacity,1)) 70%);
+    background:-ms-radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 30%, RGBA(39,48,61,var(--bs-bg-opacity,1)) 70%);
+    background:radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 30%, RGBA(39,48,61,var(--bs-bg-opacity,1)) 70%);
 }
 .gradient img {
     margin-left: -18rem;

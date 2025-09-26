@@ -92,6 +92,7 @@
   {
     "name": "Leiter Softwareentwicklung",
     "startDate": "2020-06-01",
+    "endDate": "2025-06-30",
     "description":"Verantwortlich für die:\n\n* Leitung des Java- & Webentwicklung Teams\n* Architekturberatung und Softwareentwicklung\n* Konzeption und Implementierung webbasierter Applikationen\n* Durchführung agiler Softwareprojekte",
     "roles": ["Teamleiter", "Software Architect", "Lead Software Engineer"],
     "industry": "IT Consulting",

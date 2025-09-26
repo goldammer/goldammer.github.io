@@ -33,6 +33,7 @@
     height: 20px;
     animation-delay: 2s;
     animation-duration: 12s;
+    background-color:  var(--accent-gold)
 }
 
 .circles li:nth-child(3){
@@ -40,6 +41,7 @@
     width: 20px;
     height: 20px;
     animation-delay: 4s;
+    background-color:  var(--accent-gold)
 }
 
 .circles li:nth-child(4){
